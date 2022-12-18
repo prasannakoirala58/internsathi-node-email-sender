@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form.form.form--sendMail(action='/send-email' method='POST')
+      .form__group
+        label.form__label(for='name') Name: 
+        input#email.form__input(type='name', name='name' placeholder='Your name...', required)
+      br
+      .form__group
+        label.form__label(for='email') Email address: 
+        input#email.form__input(type='email', name='email' placeholder='you@example.com', required)
+      br
+      .form__group 
+        label.form__label(for='email') Write your email content here: 
+        textarea.form__input(type='textarea', name='content', placeholder='Message')
+      br
+      .form__group
+        button.btn.btn--green Send Email

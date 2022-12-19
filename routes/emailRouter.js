@@ -6,7 +6,7 @@ const outlookAccount = 'prasannakkoirala@outlook.com';
 const outlookPassword = 'Prasanna#k13';
 
 /* POST route for sending email */
-router.post('/', async (req, res) => {
+router.post('/send-email', async (req, res) => {
   try {
     const { name, email, content } = req.body;
     console.log(JSON.parse(JSON.stringify(req.body)));
